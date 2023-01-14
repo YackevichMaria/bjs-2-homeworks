@@ -1,19 +1,17 @@
 "use strict"
 function solveEquation(a, b, c) {
   let arr = [];
-  let D = Math.pow(b, 2) - 4 * a * c;
+  let d = Math.pow(b, 2) - 4 * a * c;
   let rootOne;
   let rootNext;
 
-  if ( D < 0 ){
-    console.log("Дискриминант меньше нуля, корней нет")
-  } else if ( D === 0 ) {
+  if ( d === 0 ) {
     rootOne = - b / (2 * a);
     arr.push( rootOne );
-  } else {
-    rootOne = ( - b + Math.sqrt(D) ) / ( 2 * a );
+  } else if ( d > 0 ){
+    rootOne = ( - b + Math.sqrt(d) ) / ( 2 * a );
     arr.push( rootOne );
-    rootNext = ( - b - Math.sqrt(D) ) / ( 2 * a );
+    rootNext = ( - b - Math.sqrt(d) ) / ( 2 * a );
     arr.push( rootNext );
   }
 
