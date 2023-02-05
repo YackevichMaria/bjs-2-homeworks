@@ -28,7 +28,7 @@ class AlarmClock {
 
     getCurrentFormattedTime() {
         return new Date().toTimeString().slice(0, 5);
-        /*return new Data().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });*/
+        /*return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });*/
     }
 
     start() {
